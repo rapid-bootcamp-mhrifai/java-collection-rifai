@@ -1,5 +1,7 @@
 package iterableCollection;
 
+import model.Person;
+
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Collection;
@@ -32,5 +34,3 @@ public class MainCollection {
         }
     }
 }
-
-

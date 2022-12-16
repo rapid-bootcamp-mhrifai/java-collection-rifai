@@ -1,11 +1,19 @@
-package iterableCollection;
+package model;
 
+import java.util.List;
 import java.util.StringJoiner;
 
 public class Person {
     private int id;
     private String name;
     private String city;
+
+    private List<String> hobbies;
+
+    public Person(String name, List<String> hobbies) {
+        this.name = name;
+        this.hobbies = hobbies;
+    }
 
     public Person(int id, String name, String city) {
         this.id = id;
@@ -37,12 +45,21 @@ public class Person {
         this.city = city;
     }
 
+    public List<String> getHobbies() {
+        return hobbies;
+    }
+
+    public void setHobbies(List<String> hobbies) {
+        this.hobbies = hobbies;
+    }
+
     @Override
     public String toString() {
-        return new StringJoiner(", ", Person.class.getSimpleName() + " [", "]")
+        return new StringJoiner(", ", Person.class.getSimpleName() + "[", "]")
                 .add("id=" + id)
                 .add("name='" + name + "'")
                 .add("city='" + city + "'")
+                .add("hobbies=" + hobbies)
                 .toString();
     }
 }
